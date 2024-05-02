@@ -20,4 +20,6 @@ class EndPosition:
 
 
 
-end_p = EndPosition(0,0,0,0)
+end_p = EndPosition(5,5,5,5)
+print(end_p.get_final_matrix())
+
