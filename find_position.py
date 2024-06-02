@@ -16,10 +16,13 @@ class EndPosition:
         self.final_dh = np.dot(np.dot(np.dot(self.dh_1.get_matrix(), self.dh_2.get_matrix()), self.dh_3.get_matrix()),self.dh_4.get_matrix())
 
     def get_final_matrix(self):
+        for i in range(len(self.final_dh)):
+            for j in range(len(self.final_dh[i])):
+                self.final_dh[i][j] = round(self.final_dh[i][j], 1)
         return self.final_dh
 
 
 
-end_p = EndPosition(5,5,5,5)
+end_p = EndPosition(1,5,5,1)
 print(end_p.get_final_matrix())
 
